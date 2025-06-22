@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThaiKon.ai – Voice Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+    }
+    header {
+      background: #1e293b;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav a {
+      color: #f8fafc;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      color: #94a3b8;
+      font-size: 1.1rem;
+    }
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .card {
+      background: #1e293b;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="font-weight: 700; font-size: 1.25rem;">ThaiKon.ai</div>
+    <nav>
+      <a href="#">Voice Changer</a>
+      <a href="#">Clone Voices</a>
+      <a href="#">Projects</a>
+      <a href="#">Discover</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>เปลี่ยนเสียง สร้างเสียง ควบคุมเสียงด้วย AI</h1>
+    <p>แพลตฟอร์มที่ออกแบบเพื่อศิลปิน ครีเอเตอร์ และนักพัฒนาคนไทยทุกคน</p>
+  </div>
+
+  <div class="sections">
+    <div class="card">
+      <h2>Voice Changer</h2>
+      <p>อัปโหลดเสียงของคุณเพื่อเปลี่ยนเสียงให้เหมือนศิลปินที่คุณเลือก</p>
+    </div>
+    <div class="card">
+      <h2>Clone Voices</h2>
+      <p>โคลนเสียงคุณหรือสร้างเสียงใหม่ที่ไม่มีใครเหมือน</p>
+    </div>
+    <div class="card">
+      <h2>Projects</h2>
+      <p>จัดการโปรเจกต์เสียงของคุณในที่เดียว</p>
+    </div>
+    <div class="card">
+      <h2>Discover</h2>
+      <p>สำรวจเสียง AI ใหม่ๆ และสไตล์เสียงจากศิลปินทั่วไทย</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 ThaiKon.ai — Voice Future. Built with ❤️ in Thailand
+  </footer>
+</body>
+</html>
