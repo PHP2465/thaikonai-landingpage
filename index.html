@@ -1,37 +1,78 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ThaiKon.ai – ส่งเสียงตัวอย่าง AI</title>
+  <title>ThaiKon.ai – อัปโหลดเสียงต้นฉบับ</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #1e293b;
-      color: white;
+      background: #0f172a;
+      color: #f1f5f9;
       padding: 2rem;
     }
     h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
-    iframe {
-      width: 100%;
-      height: 800px;
-      border: none;
-      border-radius: 8px;
-    }
     .container {
       max-width: 900px;
       margin: auto;
+    }
+    .upload-box {
+      background: #1e293b;
+      padding: 2rem;
+      border-radius: 8px;
+      border: 2px dashed #94a3b8;
+      text-align: center;
+    }
+    .upload-box:hover {
+      background: #334155;
+    }
+    input[type="file"] {
+      display: none;
+    }
+    .custom-file-upload {
+      border: 1px solid #94a3b8;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+      background: #475569;
+      color: white;
+      margin-top: 1rem;
+    }
+    .file-name {
+      margin-top: 1rem;
+      font-style: italic;
+      color: #cbd5e1;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>ส่งเสียงตัวอย่างของคุณกับ ThaiKon.ai</h1>
-    <p>ช่วยพัฒนา AI เสียงไทยด้วยการส่งเสียงตัวอย่างผ่านฟอร์มด้านล่าง</p>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYourRealFormID/viewform?embedded=true" allowfullscreen></iframe>
+    <h1>อัปโหลดเสียงต้นฉบับกับ ThaiKon.ai</h1>
+    <p>ลากไฟล์เสียงมาวาง หรือเลือกไฟล์จากเครื่องของคุณ เพื่อเริ่มต้นสร้างเสียง AI</p>
+
+    <div class="upload-box" onclick="document.getElementById('fileInput').click()">
+      <p>📂 ลากไฟล์มาที่นี่ หรือคลิกเพื่อเลือกไฟล์</p>
+      <label for="fileInput" class="custom-file-upload">เลือกไฟล์เสียง</label>
+      <input type="file" id="fileInput" accept="audio/*" onchange="showFileName()" />
+      <p class="file-name" id="fileName"></p>
+    </div>
   </div>
+
+  <script>
+    function showFileName() {
+      const input = document.getElementById('fileInput');
+      const fileName = document.getElementById('fileName');
+      if (input.files.length > 0) {
+        fileName.textContent = `📎 ไฟล์ที่เลือก: ${input.files[0].name}`;
+      } else {
+        fileName.textContent = '';
+      }
+    }
+  </script>
 </body>
 </html>
